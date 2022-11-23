@@ -2,32 +2,25 @@
 import "bootstrap";
 import "./style.css";
 
-// window.onload = function() {
-//   //write your code here
-//   let symbol = ["♣", "♠", "♥", "♦"];
-//   let numbers = ["A","2","3","4","5","6","7","8","9","J","Q","K"];
+window.onload = function() {
+  //write your code here
+  let symbol = ["♣", "♠", "♥", "♦"];
+  let numbers = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "J", "Q", "K"];
 
-//   let symbolRandom = Math.floor(Math.random() * numbers.length);
-//   let numbersRandom = Math.floor(Math.random() * numero.length);
-//   console.log(numbers[symbol] + " " + numero[nu]);
+  let symbolRandom = Math.floor(Math.random() * symbol.length);
+  let numbersRandom = Math.floor(Math.random() * numbers.length);
 
-//   let carta = document.getElementsByClassName("numbers");
-//   carta[0].innerHTML = numbers[symbol];
-//   carta[1].innerHTML = numbers[symbol];
+  let topSuit = document.getElementsByClassName("top-suit")[0];
+  let card = document.getElementsByClassName("number")[0];
+  let bottomSuit = document.getElementsByClassName("bottom-suit")[0];
 
-//   document.querySelector(".num").innerHTML = numero[nu];
-// };
+  topSuit.innerHTML = symbol[symbolRandom];
+  card.innerHTML = numbers[numbersRandom];
+  bottomSuit.innerHTML = symbol[symbolRandom];
 
-// console.log(rellenorandom, simbolorandom);
-//   let Simbolo1 = document.querySelector("#carta1");
-//   Simbolo1.innerHTML = simbolorandom;
-//   let SimboloMedio = document.querySelector("#SimboloMedio");
-//   SimboloMedio.innerHTML = rellenorandom;
-//   let Simbolo11 = document.querySelector("#carta2");
-//   Simbolo11.innerHTML = simbolorandom;
-
-//   if (simbolorandom == "♥" || simbolorandom == "♦") {
-//     document.querySelector("#carta1").style.color = "red";
-//     document.querySelector("#carta2").style.color = "red";
-//   }
-// };
+  if (symbolRandom === 2 || symbolRandom === 3) {
+    topSuit.style.color = "red";
+    bottomSuit.style.color = "red";
+    card.style.color = "red";
+  }
+};
